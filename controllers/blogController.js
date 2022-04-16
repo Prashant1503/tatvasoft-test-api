@@ -24,7 +24,7 @@ exports.getAllBlogs = async (req, res) => {
             [Op.or]: {
                 "published_date": filter.published_date,
                 "author": filter.author,
-                "category": filter.category
+
             }
         }
 
@@ -41,6 +41,7 @@ exports.getAllBlogs = async (req, res) => {
             res.send({ perPage: limit, page: offset, data: _blogs });
         })
         .catch((error) => {
+            console.log(error)
             res.send({ msg: error.message })
         })
 

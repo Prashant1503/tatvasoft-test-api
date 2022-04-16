@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Blogs.belongsTo(models.User, { foreignKey: "author" });
-      Blogs.belongsTo(models.Category)
+      // Blogs.belongsTo(models.Category, { foreignKey: "id" })
     }
   }
   Blogs.init({
