@@ -1,0 +1,4 @@
+//Run commands
+
+1) Run npm install to install packages
+2) To run migration,use npx sequelize db:migrate.
